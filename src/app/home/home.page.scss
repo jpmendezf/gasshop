@@ -1,0 +1,72 @@
+.new-background-color{
+  --background: #adac95;
+  color: white;
+}
+
+
+.btn{
+  --background: #adac95;
+  --color: white;
+  --border-color: black;
+}
+
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+.ios, .md {
+
+  home-page {
+      .scroll {
+      height: 100%
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+
+    ion-title.plz-odr {
+      text-align: center;
+  }
+  .toggle-md.toggle-checked .toggle-inner{
+      background-color: #adac95;
+  }
+  .toggle-md.toggle-checked .toggle-icon{
+      background-color: #f6abb6;
+  }
+
+  .grid{
+      border: #dfdfdf solid 2px; 
+      color: #dfdfdf;
+  }
+  .grid .row{
+      padding: 1.5%;
+      font-size: 1.6rem;
+  }
+
+  ion-list{
+      border: #adac95 solid 2px;
+  }
+  .note-md{
+      color: #adac95;
+  }
+
+// map style
+a[href^="http://maps.google.com/maps"],
+a[href^="https://maps.google.com/maps"],
+a[href^="https://www.google.com/maps"] {
+  display: none !important;
+}
+.gm-bundled-control .gmnoprint {
+  display: block;
+}
+.gmnoprint:not(.gm-bundled-control) {
+  display: none;
+} 
+#map .gm-style > div:not(:first-child) { display: none; }
+.gm-control-active.gm-fullscreen-control{ display: none;}
+//map style
+}
+
+}

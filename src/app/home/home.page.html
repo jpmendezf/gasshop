@@ -1,0 +1,166 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <img alt="logo" style="margin-left: 90px" height="60" src="assets/images/logo.png">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <!-- <div #map id="map"></div>   -->
+    <ion-list *ngIf="avbToggle == '1'">
+        <ion-item>
+          <ion-label>{{availableMsg}}</ion-label>
+          <ion-toggle [(ngModel)]="available" (ionChange)="changeAvailability($event)"></ion-toggle>
+        </ion-item>
+      </ion-list>
+    
+    
+      <ion-card>
+    
+      <ion-grid *ngIf="isOrder == '1'">
+        <ion-row>
+          <ion-col col-6 offset-4>Order Details</ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col col-4>
+            Name
+          </ion-col>
+          <ion-col col-8>
+            Sam 
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col col-4>
+            Mobile
+          </ion-col>
+          <ion-col col-8>
+            98547521
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col col-4>
+            Address
+          </ion-col>
+          <ion-col col-8>
+            No1 New City.
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-4>
+            Distance
+          </ion-col>
+          <ion-col col-8>
+            1.5Km
+          </ion-col>
+        </ion-row>
+        
+    
+        <ion-row>
+          <ion-col col-4>
+            <!-- Brand&Weight -->
+            Item
+          </ion-col>
+          <ion-col col-8>
+            Shell 12.5Kg
+          </ion-col>
+        </ion-row>
+    
+    
+        <ion-row>
+          <ion-col col-4>
+            GasPrice
+          </ion-col>
+          <ion-col col-8>
+            40$
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col col-4>
+            Transport
+          </ion-col>
+          <ion-col col-8>
+            2$
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col col-4>
+            Handling
+          </ion-col>
+          <ion-col col-8>
+            1$
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col col-4>
+            Total
+          </ion-col>
+          <ion-col col-8>
+            43$
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col col-4>
+            Status
+          </ion-col>
+          <ion-col col-8>
+              Started
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card>
+    
+      <ion-grid *ngIf="isOrder == '0'">
+        <ion-row>
+          <ion-col>
+            No new order
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    
+      <ion-grid *ngIf="OStatus == 'Pending'">
+        <ion-row>
+          <ion-col col-6>
+              <ion-button class="btn" size="small" *ngIf="OStatus == 'Pending'" (click)="acceptOrder()">Accept Order</ion-button>
+          </ion-col>
+          <ion-col col-6>
+              <ion-button class="btn" size="small" *ngIf="OStatus == 'Pending'" (click)="cancelOrder()">Cancel Order</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    
+      <ion-grid *ngIf="OStatus == 'Accepted'">
+        <ion-row>
+          <ion-col>
+            <ion-button class="btn" size="small" *ngIf="OStatus == 'Accepted'" (click)="startOrder()">Start Order</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    
+      <ion-grid *ngIf="OStatus == 'Started'">
+        <ion-row>
+          <ion-col>
+            <ion-button class="btn" size="small" *ngIf="OStatus == 'Started'" (click)="completeOrder()">Complete Order</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <!-- <div>
+        <audio #audio>
+          <source src="assets/audio/alert.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div> -->
+    
+</ion-content>

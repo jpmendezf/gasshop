@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+      <ion-buttons class="btn" slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <img alt="logo" style="margin-left: 90px" height="60" src="assets/images/logo.png">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+
+            <div padding>
+              <ion-item>
+                <ion-input type="text" [(ngModel)]="Name" placeholder="Shop Name"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-input type="text" [(ngModel)]="Address1" placeholder="No"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-input type="text" [(ngModel)]="Address2" placeholder="Street"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-input type="text" [(ngModel)]="Address3" placeholder="State"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-input type="text" [(ngModel)]="Mobile" placeholder="Mobile"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-input type="text" [(ngModel)]="Username" placeholder="User Name"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-input type="password" [(ngModel)]="Password" placeholder="Password"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label>Brand</ion-label>
+                  <ion-select [(ngModel)]="Brand" placeholder="Select One">
+                    <ion-select-option value="Shell">Shell</ion-select-option>
+                    <ion-select-option value="TGas">TGas</ion-select-option>
+                  </ion-select>
+              </ion-item>
+      
+            </div>
+      
+            <div padding>
+              <ion-button class="btn" size="medium" (click) = "saveData()" expand="block">SUBMIT</ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+</ion-content>

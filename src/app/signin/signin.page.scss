@@ -1,0 +1,50 @@
+$white-color: #adac95;
+$height100: 100%;
+
+.new-background-color{
+    --background: #b6b6b6;
+  }
+
+  .titlec{
+    text-align: center;
+    color: white;
+  }
+  
+  .btn{
+    color: whitesmoke
+  }
+  
+
+ion-grid {
+    width:100%;
+    height: $height100;
+    background: #dfdfdf;
+}
+
+ion-row {
+    height: $height100;
+}
+
+ion-col {
+    border: 1px solid #dfdfdf;
+    background: $white-color;
+}
+
+ion-button {
+    font-weight: 300;
+}
+
+.btn{
+    --background: #b6b6b6;
+    --color: white;
+    --border-color: black;
+}
+
+@media (min-width: 240px) and (max-width: 768px) {
+    ion-grid {
+        background: $white-color;
+    }
+    ion-col {
+        border: none;
+    }
+}

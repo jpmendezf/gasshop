@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <img alt="logo" style="margin-left: 90px" height="60" src="assets/images/logo.png">
+    <ion-buttons slot="end">
+      <ion-button (click) = "saveLocation()" color="light">
+        <ion-icon slot="icon-only" name="checkmark-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div #mapElement class="map"></div>
+
+  <label>{{address}}</label>
+
+
+</ion-content>
